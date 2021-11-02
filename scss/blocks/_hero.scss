@@ -1,0 +1,23 @@
+.hero{
+    background-repeat: no-repeat;
+    background-image: url("../../img/hero-bg.jpg");
+    background-size: cover;
+    background-position: center center;
+
+    &::before{
+        content: "";
+        width: 100%;
+        height: 100%;
+        position:absolute;
+        left: 0;
+        top: 0;
+        background: linear-gradient(89.85deg, #000000 0.13%, #000000 0.14%, rgba(0, 0, 0, 0) 99.56%);
+        z-index: 0;
+    }
+}
+
+@media screen and (max-width:992px){
+    .hero::before{
+        background: rgba(0, 0, 0, 0.75);
+    }
+}

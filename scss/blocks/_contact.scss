@@ -1,0 +1,89 @@
+.contact {
+    padding: 90px 0;
+    background-image: url("../../img/contact-bg.jpg");
+    background-size: cover;
+
+    &::before{
+        content: "";
+        width: 100%;
+        height: 100%;
+        position:absolute;
+        left: 0;
+        top: 0;
+        background: linear-gradient(89.83deg, #fff 14.24%, #fff 14.25%, rgba(255, 255, 255, 0) 99.55%);
+    }
+
+    &__small-title {
+        font-size: 16px;
+        line-height: 24px;
+        letter-spacing: 0.1px;
+        color: #252b42;
+    }
+
+    &__title {
+        font-size: 40px;
+        line-height: 57px;
+        letter-spacing: 0.2px;
+        color: #252b42;
+        margin-bottom: 40px;
+    }
+
+    &__inp::placeholder{
+        font-size: 14px;
+        line-height: 28px;
+        letter-spacing: 0.2px;
+        color: #737373;
+    }
+
+    &__inp,
+    &__textarea,
+    &__select{
+        padding: 11px 21px;
+        background-color: #f9f9f9;
+        border: 1px solid #e6e6e6;
+        border-radius: 5px;
+        margin-bottom: 20px;
+    }
+
+    &__select:valid{
+        font-size: 14px;
+        line-height: 28px;
+        letter-spacing: 0.2px;
+        color: #737373;
+    }
+
+    &__select--clock:valid,
+    &__textarea::placeholder{
+        font-weight: 600;
+        color: #bdbdbd;
+    }
+
+    &__textarea {
+        margin-bottom: 40px;
+    }
+
+    &__btn {
+        background: $btn-bg;
+        padding: 15px 40px;
+        transition: all 0.3s ease;
+
+        &:hover{
+            color: $btn-bg !important;
+        }
+    }
+}
+
+
+@media screen and (max-width:576px){
+    label{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width:768px){
+    .contact{
+        padding-left: 30px;
+        padding-right: 30px;
+        background-position: center center;
+    }
+}

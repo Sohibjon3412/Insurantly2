@@ -1,0 +1,113 @@
+.pricing {
+    background: #252b42;
+    padding: 112px 0;
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+        background: #fff;
+        border: 1px solid #dedede;
+        border-radius: 10px;
+        padding: 50px 40px;
+        margin-bottom: 30px;
+    }
+
+    &__sale{   
+        top: -20px; 
+        right: 17px;
+        padding: 25px 20px;
+        background: #e77c40;
+        border-radius: 50%;
+        position:absolute;
+    }
+
+    &__title {
+        margin-bottom: 35px;
+        font-size: 24px;
+        line-height: 32px;
+        letter-spacing: 0.1px;
+    }
+
+    &__desc {
+        max-width: 165px;
+        font-size: 16px;
+        line-height: 24px;
+        margin-bottom: 35px;
+        letter-spacing: 0.1px;
+    }
+
+    &__cost {
+        color: #23a6f0;
+        font-size: 40px;
+        line-height: 57px;
+        letter-spacing: 0.2px;
+    }
+
+    &__month {
+        font-size: 16px;
+        line-height: 24px;
+        letter-spacing: 0.1px;
+        color: #8ce2f2;
+        margin-bottom: 35px;
+    }
+
+    &__btn {
+        background: $btn-bg;
+        font-size: 14px;
+        line-height: 22px;
+        letter-spacing: 0.2px;
+        transition: all 0.3s ease;
+        padding: 15px 81px;
+        margin-bottom: 35px;
+
+        &:hover{
+            color: $btn-bg !important;
+        }
+    }
+
+
+
+    &__updates-product {
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 24px;
+        letter-spacing: 0.2px;
+        color: #252b42;
+        padding-left: 40px;
+
+        &:not(:last-child){
+            margin-bottom: 16px;
+        }
+
+        &::before{
+            content: "";
+            position:absolute;
+            left: 0;
+            top: 50%;
+            transform: translate(0,-50%);
+            width: 32px;
+            height: 32px;
+            background-repeat: no-repeat;
+            background-size: 32px 32px;
+            background-image: url("../../img/check.svg");
+        }
+    }
+
+    &__updates-product--disabled::before{
+        background-image: url("../../img/check-disabled.svg")
+    }
+}
+
+
+@media screen and (max-width:400px){
+    .pricing__btn{
+        padding: 10px;
+    }
+}
+
+@media screen and (max-width:768px){
+    .pricing{
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+}

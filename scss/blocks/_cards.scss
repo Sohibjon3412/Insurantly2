@@ -1,0 +1,76 @@
+.cards {
+    background: #252b42;
+    padding: 112px 15px;
+
+    &__list {
+        padding: 0 15px;
+    }
+
+    &__item {
+        height: 452px;
+        background: none;
+        border: none;
+        border-radius: 0;
+        margin-bottom: 30px;
+
+    }
+
+    &__box {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        background-image: url("../../img/archa.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+
+        &::before{
+            content: "";
+            width: 100%;
+            height: 100%;
+            position:absolute;
+            left: 0;
+            top: 0;
+            background: linear-gradient(180deg, rgba(0, 0, 0, 0) 14.58%, rgba(56, 56, 56, 0.84) 100%);
+        }
+    }
+
+    &__title {
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 24px;
+        letter-spacing: 0.2px;
+        margin-bottom: 15px;
+    }
+
+    &__desc {
+        max-width: 237px;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 30px;
+        letter-spacing: 0.2px;
+        margin-bottom: 15px;
+    }
+
+    &__btn {
+        max-width: 168px;
+        background: $btn-bg;
+        border-radius: 37px;
+    }
+}
+.cards-box2 {
+    background-image: url("../../img/osmon.jpg") !important;
+}
+.cards-box3 {
+    background-image: url("../../img/moneyy.jpg") !important;
+}
+.cards-box4 {
+    background-image: url("../../img/business.jpg") !important;
+}
+
+@media screen and (max-width:768px){
+    .cards{
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+}
